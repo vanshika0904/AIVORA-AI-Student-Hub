@@ -57,7 +57,13 @@ AIVORA includes a personalized learning system that tracks:
 ## 🎯 Purpose
 
 The goal of AIVORA is to create a single, simple and intelligent workspace where students can study, practice, plan, and track their academic progress.
+## 📸 Screenshots
 
+### My AIVORA Profile
+Personalized student profile with learning statistics, AIVORA score, level, subjects, interests, tasks, streak, and study activity.
+
+### Learning Dashboard
+A centralized dashboard showing quizzes, notes, coding activity, completed tasks, study streak, XP, and learning progress.
 ## 🌐 Live Demo
 
 https://myaivora.unaux.com/
