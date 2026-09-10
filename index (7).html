@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AIVORA - AI Student Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+        <div class="logo">AIVORA</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#tools">AI Tools</a>
+            <a href="#calculator">CGPA Calculator</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+
+<!-- ================= HERO ================= -->
+<!-- ================= USER PROFILE ================= -->
+
+<section class="profile-section" id="profile">
+
+    <div class="profile-header">
+
+        <div>
+            <span class="dashboard-label">✦ MY AIVORA PROFILE</span>
+
+            <h2>Your Learning Profile</h2>
+
+            <p>
+                Manage your student details and track your learning journey.
+            </p>
+        </div>
+
+        <button
+            class="button"
+            onclick="toggleProfileEdit()">
+            ✏️ Edit Profile
+        </button>
+
+    </div>
+
+
+    <div class="profile-card">
+
+        <div class="profile-avatar">
+            👩‍💻
+        </div>
+
+
+        <div class="profile-info">
+
+            <h3 id="profileName">
+                Your Name
+            </h3>
+
+            <p id="profileCollege">
+                🎓 Your College
+            </p>
+
+            <p id="profileCourse">
+                💻 B.Tech Computer Science
+            </p>
+
+            <p id="profileYear">
+                📚 Your Year / Semester
+            </p>
+
+
+            <div class="profile-interests">
+
+                <span>📚 Subjects & Interests</span>
+
+                <p id="profileInterests">
+                    AI • Machine Learning • Python
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-score">
+
+            <span>AIVORA SCORE</span>
+
+            <strong id="profileScore">
+                0
+            </strong>
+
+            <small>
+                Level <span id="profileLevel">1</span>
+            </small>
+
+        </div>
+        <div class="profile-learning-overview">
+
+    <div class="overview-title">
+        <span>✦ LEARNING OVERVIEW</span>
+        <p>Your AIVORA activity</p>
+    </div>
+
+    <div class="overview-grid">
+
+        <div class="overview-item">
+            <strong id="profileQuizCount">0</strong>
+            <span>🧠 Quizzes</span>
+        </div>
+
+        <div class="overview-item">
+            <strong id="profileNotesCount">0</strong>
+            <span>📝 Notes</span>
+        </div>
+
+        <div class="overview-item">
+            <strong id="profileCodeCount">0</strong>
+            <span>💻 Codes</span>
+        </div>
+
+        <div class="overview-item">
+            <strong id="profileTaskCount">0</strong>
+            <span>🎯 Tasks</span>
+        </div>
+
+        <div class="overview-item">
+            <strong id="profileStreakCount">0</strong>
+            <span>🔥 Streak</span>
+        </div>
+
+        <div class="overview-item">
+            <strong id="profileStudyMinutes">0</strong>
+            <span>⏱️ Study Min</span>
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+
+
+    <!-- PROFILE EDIT FORM -->
+
+    <div
+        class="profile-edit-box"
+        id="profileEditBox">
+
+        <h3>✏️ Edit Your Profile</h3>
+
+
+        <input
+            type="text"
+            id="profileNameInput"
+            placeholder="Enter your name"
+        >
+
+
+        <input
+            type="text"
+            id="profileCollegeInput"
+            placeholder="Enter your college"
+        >
+
+
+        <input
+            type="text"
+            id="profileCourseInput"
+            placeholder="Enter your course"
+        >
+
+
+        <input
+            type="text"
+            id="profileYearInput"
+            placeholder="Enter your year / semester"
+        >
+
+
+      <div class="profile-interest-field">
+
+    <label>📚 Subjects</label>
+
+    <input
+        type="text"
+        id="profileSubjectsInput"
+        placeholder="Enter your subjects"
+    >
+
+</div>
+
+<div class="profile-interest-field">
+
+    <label>💡 Interests</label>
+
+    <input
+        type="text"
+        id="profileInterestsInput"
+        placeholder="Enter your interests"
+    >
+
+</div>
+
+        </div>
+
+
+        <button
+            class="button"
+            onclick="saveProfile()">
+            💾 Save Profile
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="dashboard" id="dashboard">
+
+    <div class="dashboard-content">
+
+        <div class="dashboard-welcome">
+            <span class="dashboard-label">✦ YOUR AI STUDY SPACE</span>
+
+            <h2>
+                Welcome to <span>AIVORA</span>
+            </h2>
+
+            <p>
+                Everything you need to learn, build and grow —
+                powered by AI.
+            </p>
+            </div>
+            <!-- QUICK ACTIONS -->
+
+<div class="quick-actions">
+
+    <div class="quick-title">
+        <span>QUICK ACTIONS</span>
+        <h3>What do you want to do?</h3>
+    </div>
+
+    <div class="quick-grid">
+
+        <a href="#study" class="quick-action">
+            <span>🤖</span>
+            <div>
+                <strong>Ask AI</strong>
+                <small>Get instant answers</small>
+            </div>
+        </a>
+
+        <a href="#notes" class="quick-action">
+            <span>📝</span>
+            <div>
+                <strong>Make Notes</strong>
+                <small>Summarize any topic</small>
+            </div>
+        </a>
+
+        <a href="#quiz" class="quick-action">
+            <span>🧠</span>
+            <div>
+                <strong>Start Quiz</strong>
+                <small>Test your knowledge</small>
+            </div>
+        </a>
+
+        <a href="#planner" class="quick-action">
+            <span>📅</span>
+            <div>
+                <strong>Plan Study</strong>
+                <small>Organize your tasks</small>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+        </div>
+
+
+        <div class="dashboard-actions">
+
+            <a href="#study" class="dashboard-card primary-dashboard">
+
+                <div class="dashboard-icon">🤖</div>
+
+                <div>
+                    <h3>Ask AIVORA</h3>
+                    <p>Get instant help with your studies.</p>
+                </div>
+
+                <span>→</span>
+
+            </a>
+
+
+            <a href="#notes" class="dashboard-card">
+
+                <div class="dashboard-icon">📝</div>
+
+                <div>
+                    <h3>Generate Notes</h3>
+                    <p>Turn topics into quick notes.</p>
+                </div>
+
+                <span>→</span>
+
+            </a>
+
+
+            <a href="#quiz" class="dashboard-card">
+
+                <div class="dashboard-icon">🧠</div>
+
+                <div>
+                    <h3>Take a Quiz</h3>
+                    <p>Test your knowledge with AI.</p>
+                </div>
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+
+        <div class="dashboard-stats">
+
+            <div class="stat-card">
+                <span class="stat-icon">⚡</span>
+                <div>
+                    <strong>AI Powered</strong>
+                    <small>Smart learning tools</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🎯</span>
+                <div>
+                    <strong>Study Smarter</strong>
+                    <small>Learn more efficiently</small>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🚀</span>
+                <div>
+                    <strong>Build Better</strong>
+                    <small>Grow your skills</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+<!-- DASHBOARD LOWER AREA -->
+
+<div class="dashboard-lower">
+
+
+<!-- RECENT ACTIVITY -->
+<div class="dashboard-panel" id="activityPanel">
+
+    <div class="panel-heading">
+        <div>
+            <span>RECENT ACTIVITY</span>
+            <h3>Your Learning Space</h3>
+        </div>
+
+        <span class="panel-dot">●</span>
+    </div>
+
+    <div class="activity-item">
+        <div class="activity-icon">📝</div>
+        <div>
+            <strong>AI Notes</strong>
+            <p>Generate simple notes from any topic.</p>
+        </div>
+        <span>→</span>
+    </div>
+
+    <div class="activity-item">
+        <div class="activity-icon">🧠</div>
+        <div>
+            <strong>AI Quiz</strong>
+            <p>Practice with AI-generated questions.</p>
+        </div>
+        <span>→</span>
+    </div>
+
+    <div class="activity-item">
+        <div class="activity-icon">💻</div>
+        <div>
+            <strong>Code Helper</strong>
+            <p>Understand and improve your code.</p>
+        </div>
+        <span>→</span>
+    </div>
+
+</div>
+
+
+<!-- AIVORA PROGRESS -->
+<div class="dashboard-panel progress-panel">
+
+    <div class="panel-heading">
+        <div>
+            <span>YOUR AIVORA PROGRESS</span>
+            <h3>Learning Dashboard</h3>
+        </div>
+
+        <span class="progress-symbol">✦</span>
+    </div>
+
+    <div class="progress-stats">
+
+        <div class="progress-card">
+            <span>🧠</span>
+            <strong id="quizCount">0</strong>
+            <p>Quizzes</p>
+        </div>
+
+        <div class="progress-card">
+            <span>📚</span>
+            <strong id="notesCount">0</strong>
+            <p>Notes</p>
+        </div>
+
+        <div class="progress-card">
+            <span>💻</span>
+            <strong id="codeCount">0</strong>
+            <p>Codes</p>
+        </div>
+
+        <div class="progress-card">
+            <span>✅</span>
+            <strong id="taskCount">0</strong>
+            <p>Tasks Done</p>
+        </div>
+
+        <div class="progress-card">
+            <span>🔥</span>
+            <strong id="streakCount">0</strong>
+            <p>Day Streak</p>
+        </div>
+
+        <div class="progress-card">
+            <span>⚡</span>
+            <strong id="xpCount">0</strong>
+            <p>AIVORA XP</p>
+            <p id="levelText">Level 1</p>
+
+            <div class="xp-bar">
+                <div class="xp-fill" id="xpFill"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="insightContent">
+        <p>Analyzing your learning journey...</p>
+    </div>
+
+    <small id="xpProgressText">0 / 100 XP</small>
+
+    <p class="progress-text">
+        Your AIVORA learning journey, all in one place.
+    </p>
+
+</div>
+
+
+
+<!-- QUIZ PERFORMANCE -->
+
+<div class="dashboard-panel quiz-performance-panel">
+
+    <div class="panel-heading">
+
+        <div>
+            <span>QUIZ ANALYTICS</span>
+            <h3>📊 Quiz Performance</h3>
+        </div>
+
+        <span class="progress-symbol">✦</span>
+
+    </div>
+
+
+    <div class="quiz-performance-stats">
+
+        <div class="performance-card">
+
+            <span>🧠</span>
+
+            <strong id="totalQuizzes">
+                0
+            </strong>
+
+            <p>Total Quizzes</p>
+
+        </div>
+
+
+        <div class="performance-card">
+
+            <span>📈</span>
+
+            <strong id="averageScore">
+                0%
+            </strong>
+
+            <p>Average Score</p>
+
+        </div>
+
+
+        <div class="performance-card">
+
+            <span>🏆</span>
+
+            <strong id="bestScore">
+                0%
+            </strong>
+
+            <p>Best Score</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="quiz-history-box">
+
+        <h4>Recent Attempts</h4>
+
+        <div id="quizHistoryList">
+
+            <p>No quiz attempts yet.</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="score-trend-box">
+
+        <h4>📈 Score Trend</h4>
+
+        <div id="scoreTrend">
+
+            <p>No score trend available yet.</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="quiz-improvement-box">
+
+        <h4>🚀 Improvement Tracker</h4>
+
+        <div id="quizImprovement">
+
+            <p>
+                Complete at least 2 quizzes to see your improvement.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ACHIEVEMENTS -->
+
+<div class="dashboard-panel achievements-panel">
+
+    <div class="panel-heading">
+
+        <div>
+            <span>AIVORA ACHIEVEMENTS</span>
+            <h3>🏆 Your Achievements</h3>
+        </div>
+
+        <span class="progress-symbol">✦</span>
+
+    </div>
+
+
+    <div class="achievements-grid">
+
+        <div class="achievement-card">
+
+            <span>🧠</span>
+
+            <strong>First Quiz</strong>
+
+            <p>
+                Complete your first quiz
+            </p>
+
+        </div>
+
+
+        <div class="achievement-card">
+
+            <span>📚</span>
+
+            <strong>Note Maker</strong>
+
+            <p>
+                Generate your first AI notes
+            </p>
+
+        </div>
+
+
+        <div class="achievement-card">
+
+            <span>💻</span>
+
+            <strong>Code Master</strong>
+
+            <p>
+                Use AI Code Helper
+            </p>
+
+        </div>
+
+
+        <div class="achievement-card">
+
+            <span>🏆</span>
+
+            <strong>Quiz Champion</strong>
+
+            <p>
+                Score 80% or higher
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- DAILY STUDY GOAL -->
+
+<div class="dashboard-panel daily-goal-panel">
+
+    <div class="panel-heading">
+
+        <div>
+            <!-- STUDY HISTORY -->
+
+<div class="dashboard-panel study-history-panel">
+
+    <div class="panel-heading">
+
+        <div>
+            <span>STUDY HISTORY</span>
+            <h3>📅 Your Study Activity</h3>
+        </div>
+
+        <span class="progress-symbol">✦</span>
+
+    </div>
+
+    <div id="studyHistoryList">
+
+        <p class="empty-history">
+            No study sessions recorded yet.
+        </p>
+
+    </div>
+
+</div>
+
+            <span>DAILY STUDY GOAL</span>
+
+            <h3>🎯 Today's Study Goal</h3>
+
+        </div>
+
+        <span class="progress-symbol">✦</span>
+
+    </div>
+
+
+    <div class="daily-goal-progress">
+
+        <p id="dailyGoalText">
+            0 / 60 minutes
+        </p>
+
+
+        <div class="daily-goal-bar">
+
+            <div
+                class="daily-goal-fill"
+                id="dailyGoalFill">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="study-session">
+
+        <div
+            class="session-timer"
+            id="studyTimer">
+
+            00:00
+
+        </div>
+
+
+        <div class="session-buttons">
+
+            <button
+                class="button"
+                onclick="startStudySession()">
+
+                ▶ Start Session
+
+            </button>
+
+
+            <button
+                class="button"
+                onclick="stopStudySession()">
+
+                ⏹ Stop Session
+
+            </button>
+
+        </div>
+
+
+        <p id="sessionStatus">
+            Ready to study?
+        </p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+    <!-- ================= AI TOOLS ================= -->
+
+    <section class="tools" id="tools">
+
+        <h2>Powerful Tools. One Place.</h2>
+
+        <div class="cards">
+
+            <!-- AI NOTES -->
+
+            <div class="card">
+
+                <div class="tool-icon">
+                    📝
+                </div>
+
+                <h3>AI Notes</h3>
+
+                <p>
+                    Turn lengthy study material into simple and easy notes.
+                </p>
+
+                <a href="#notes" class="tool-button">
+                    Open Tool →
+                </a>
+
+            </div>
+
+
+            <!-- AI QUIZ -->
+
+            <div class="card">
+
+                <div class="tool-icon">
+                    🧠
+                </div>
+
+                <h3>AI Quiz</h3>
+
+                <p>
+                    Test your knowledge with smart AI-generated quizzes.
+                </p>
+
+                <a href="#quiz" class="tool-button">
+                    Open Tool →
+                </a>
+
+            </div>
+
+
+            <!-- STUDY PLANNER -->
+
+            <div class="card">
+
+                <div class="tool-icon">
+                    📅
+                </div>
+
+                <h3>Study Planner</h3>
+
+                <p>
+                    Organize your study schedule and stay productive.
+                </p>
+
+                <a href="#planner" class="tool-button">
+                    Open Tool →
+                </a>
+
+            </div>
+
+
+            <!-- CODE HELPER -->
+
+            <div class="card">
+
+                <div class="tool-icon">
+                    💻
+                </div>
+
+                <h3>Code Helper</h3>
+
+                <p>
+                    Understand programming concepts and debug your code.
+                </p>
+
+                <a href="#codehelper" class="tool-button">
+                    Open Tool →
+                </a>
+
+            </div>
+
+
+            <!-- CGPA CALCULATOR -->
+
+            <div class="card">
+
+                <div class="tool-icon">
+                    📊
+                </div>
+
+                <h3>CGPA Calculator</h3>
+
+                <p>
+                    Calculate your academic performance quickly and easily.
+                </p>
+
+                <a href="#calculator" class="tool-button">
+                    Open Tool →
+                </a>
+
+            </div>
+
+
+            <!-- PROJECT IDEAS -->
+
+            <div class="card">
+
+                <div class="tool-icon">
+                    💡
+                </div>
+
+                <h3>Project Ideas</h3>
+
+                <p>
+                    Discover creative technology and AI project ideas.
+                </p>
+
+                <a href="#about" class="tool-button">
+                    Explore →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CGPA CALCULATOR ================= -->
+
+    <section class="tools" id="calculator">
+
+        <h2>📊 CGPA Calculator</h2>
+
+        <p>
+            Enter your marks out of 100
+        </p>
+
+        <br>
+
+        <input
+            type="number"
+            id="marks"
+            placeholder="Enter your marks"
+            min="0"
+            max="100"
+        >
+
+        <br><br>
+
+        <button
+            class="button"
+            onclick="calculateCGPA()">
+            Calculate CGPA
+        </button>
+
+        <h3 id="result"></h3>
+
+    </section>
+
+
+    <!-- ================= AI NOTES ================= -->
+
+    <section class="tools" id="notes">
+
+        <h2>📝 AI Notes Generator</h2>
+
+        <p>
+            Enter any topic and create quick study notes.
+        </p>
+
+        <br>
+
+        <textarea
+            id="topic"
+            placeholder="Enter your topic here..."
+            rows="5"></textarea>
+
+        <br><br>
+
+        <button
+            class="button"
+            onclick="generateNotes()">
+            Generate Notes
+        </button>
+
+        <div id="notesResult"></div>
+
+    </section>
+
+
+    <!-- ================= AI QUIZ ================= -->
+
+    <section class="tools" id="quiz">
+
+        <h2>🧠 AI Quiz Generator</h2>
+
+        <p>
+            Enter a topic and test your knowledge.
+        </p>
+
+        <br>
+
+        <input
+            type="text"
+            id="quizTopic"
+            placeholder="Enter quiz topic..."
+        >
+
+        <br><br>
+
+        <button
+            class="button"
+            onclick="generateQuiz()">
+            Generate Quiz
+        </button>
+
+        <div id="quizResult"></div>
+
+    </section>
+
+
+    <!-- ================= STUDY PLANNER ================= -->
+
+    <section class="tools" id="planner">
+
+        <h2>📅 AI Study Planner</h2>
+
+        <p>
+            Plan your studies and keep your assignments organized.
+        </p>
+
+        <div class="planner-box">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your study task..."
+            >
+
+            <input
+                type="file"
+                id="assignmentFile"
+                accept=".pdf,.doc,.docx,.ppt,.pptx,.txt"
+            >
+
+            <button
+                class="button"
+                onclick="addTask()">
+                ➕ Add Task
+            </button>
+
+        </div>
+
+        <div id="taskList"></div>
+
+    </section>
+
+
+    <!-- ================= AI STUDY BUDDY ================= -->
+
+    <section class="tools" id="study">
+
+        <h2>🤖 AI Study Buddy</h2>
+
+        <p>
+            Ask anything and get a quick study response.
+        </p>
+
+        <br>
+
+        <textarea
+            id="studyQuestion"
+            placeholder="Ask your study question..."
+            rows="4"></textarea>
+
+        <br><br>
+
+        <button
+            class="button"
+            onclick="askStudyBuddy()">
+            Ask AIVORA
+        </button>
+
+        <div id="studyResult"></div>
+
+    </section>
+
+
+    <!-- ================= CODE HELPER ================= -->
+
+    <section class="tools" id="codehelper">
+
+        <h2>💻 Code Helper</h2>
+
+        <p>
+            Paste your code and get a simple explanation or debugging tip.
+        </p>
+
+        <br>
+
+        <textarea
+            id="codeInput"
+            placeholder="Paste your code here..."
+            rows="8"></textarea>
+
+        <br><br>
+
+        <button
+            class="button"
+            onclick="helpWithCode()">
+            🔍 Analyze Code
+        </button>
+
+        <div id="codeResult"></div>
+
+    </section>
+<!-- ================= AI EXAM PREP MODE ================= -->
+
+<section class="tools exam-prep" id="examPrep">
+
+    <h2>🚀 AI Exam Prep Mode</h2>
+
+    <p>
+        Tell AIVORA about your exam and get a smart AI-powered preparation plan.
+    </p>
+
+    <br>
+
+    <input
+        type="text"
+        id="examSubject"
+        placeholder="Enter subject or topic..."
+    >
+
+    <br><br>
+
+    <input
+        type="date"
+        id="examDate"
+    >
+
+    <br><br>
+
+    <input
+        type="number"
+        id="studyHours"
+        placeholder="Daily study hours"
+        min="1"
+        max="12"
+    >
+
+    <br><br>
+
+    <button
+        class="button"
+        onclick="generateExamPlan()">
+        🚀 Create My Study Plan
+    </button>
+
+    <div id="examPrepResult"></div>
+
+</section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="about">
+
+        <h3>AIVORA</h3>
+
+        <p>
+            Your AI-powered student companion.
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 AIVORA — Learn. Build. Grow.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
