@@ -66,6 +66,9 @@ Personalized student profile with learning statistics, AIVORA score, level, subj
 A centralized dashboard showing quizzes, notes, coding activity, completed tasks, study streak, XP, and learning progress.
 ## 🌐 Live Demo
 
+![AIVORA Profile](screenshots/aivora-profile.png)
+
+![AIVORA Learning Dashboard](screenshots/aivora-dashboard.png)
 https://myaivora.unaux.com/
 
 ## 👩‍💻 Project
